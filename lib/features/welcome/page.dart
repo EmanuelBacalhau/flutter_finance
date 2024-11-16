@@ -3,6 +3,7 @@ import 'package:flutter_finance/constants/app_color.dart';
 import 'package:flutter_finance/constants/app_image.dart';
 import 'package:flutter_finance/features/sign-in/page.dart';
 import 'package:flutter_finance/features/sign-up/page.dart';
+import 'package:flutter_finance/widgtes/basic_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -80,48 +81,15 @@ class WelcomePage extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
-                ElevatedButton(
+                BasicButton(
+                  title: 'Criar conta',
                   onPressed: _navigateToSignUpPage,
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(screenWidth * 0.9, 50),
-                    backgroundColor: const Color(AppColor.darkBlue),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                  child: const Text(
-                    'Iniciar',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
                 ),
-                const SizedBox(height: 16),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                  ),
-                  onPressed: _navigateToSignInPage,
-                  child: RichText(
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Já tem uma conta? ',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                        TextSpan(
-                          text: 'Entrar',
-                          style: TextStyle(
-                            color: Color(AppColor.darkBlue),
-                            fontWeight: FontWeight.bold,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                const SizedBox(height: 8),
+                BasicButton(
+                  title: 'Entrar',
+                  onPressed: _navigateToSignUpPage,
+                  isOutlined: true,
                 ),
               ],
             ),
