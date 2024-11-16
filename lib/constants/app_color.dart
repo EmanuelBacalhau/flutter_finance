@@ -6,8 +6,8 @@ class AppColor {
   static const darkBlue = 0xFF095FB1;
 
   static const LinearGradient gradientBlue = LinearGradient(
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
     colors: [
       Color(lightBlue),
       Color(mediumBlue),
