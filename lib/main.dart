@@ -10,9 +10,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+      home: const SplashPage(),
+      theme: ThemeData(
+        textSelectionTheme: TextSelectionThemeData(
+          selectionHandleColor: Colors.white, // Cor da bolinha (handle)
+          selectionColor:
+              Colors.blue.withOpacity(0.4), // Cor do texto selecionado
+          cursorColor: Colors.white,
+        ),
+      ),
     );
   }
 }

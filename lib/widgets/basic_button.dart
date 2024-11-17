@@ -4,7 +4,7 @@ import 'package:flutter_finance/constants/app_color.dart';
 class BasicButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
-  final isOutlined;
+  final bool isOutlined;
 
   const BasicButton({
     super.key,

@@ -3,7 +3,7 @@ import 'package:flutter_finance/constants/app_color.dart';
 import 'package:flutter_finance/constants/app_image.dart';
 import 'package:flutter_finance/features/sign-in/page.dart';
 import 'package:flutter_finance/features/sign-up/page.dart';
-import 'package:flutter_finance/widgtes/basic_button.dart';
+import 'package:flutter_finance/widgets/basic_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,14 +13,14 @@ class WelcomePage extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    void _navigateToSignInPage() {
+    void navigateToSignInPage() {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const SignInPage()),
       );
     }
 
-    void _navigateToSignUpPage() {
+    void navigateToSignUpPage() {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const SignUpPage()),
@@ -83,12 +83,12 @@ class WelcomePage extends StatelessWidget {
                 const SizedBox(height: 24),
                 BasicButton(
                   title: 'Criar conta',
-                  onPressed: _navigateToSignUpPage,
+                  onPressed: navigateToSignUpPage,
                 ),
                 const SizedBox(height: 8),
                 BasicButton(
                   title: 'Entrar',
-                  onPressed: _navigateToSignUpPage,
+                  onPressed: navigateToSignInPage,
                   isOutlined: true,
                 ),
               ],
