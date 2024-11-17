@@ -69,7 +69,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       const SizedBox(height: 16),
                       confirmPasswordField(),
                       const SizedBox(height: 16),
-                      loginButton(),
+                      signUpButton(),
                       const SizedBox(height: 20),
                       TextButton(
                         onPressed: () {
@@ -288,7 +288,7 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  Widget loginButton() {
+  Widget signUpButton() {
     return ElevatedButton(
       onPressed: () {
         // Navigator.pushAndRemoveUntil(
@@ -304,7 +304,7 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
       ),
       child: const Text(
-        'Entrar',
+        'Criar conta',
         style: TextStyle(
           color: Color(AppColor.darkBlue),
           fontSize: 14,
